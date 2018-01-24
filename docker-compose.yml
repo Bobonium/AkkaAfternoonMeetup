@@ -1,0 +1,13 @@
+version: "3"
+services:
+  akka-demo:
+    build:
+      context: .
+    image: akka-demo
+    command:
+     --nr-messages 1000000
+     --nr-async-actors 10000
+     --nr-blocking-actors 24
+     --delay 1
+     --concurrent 1
+     --log-every 10000
